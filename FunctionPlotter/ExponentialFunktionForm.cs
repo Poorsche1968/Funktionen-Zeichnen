@@ -48,6 +48,8 @@ namespace FunktionZeichnen
             Controls.Add(textBoxBasis);
             Controls.Add(buttonZeichne);
         }
+
+        
     }
 }
 
