@@ -21,7 +21,7 @@ namespace FunktionZeichnen
             // Menüleiste erstellen
             var menuStrip = new MenuStrip();
 
-            // Menü "Funktionen"
+            // Menü Funktionen
             var funktionsMenu = new ToolStripMenuItem("Funktion");
             var linearMenuItem = new ToolStripMenuItem("Lineare Funktion");
             var quadratischeMenuItem = new ToolStripMenuItem("Quadratische Funktion");
@@ -51,6 +51,11 @@ namespace FunktionZeichnen
             form.WindowState = FormWindowState.Maximized;
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
