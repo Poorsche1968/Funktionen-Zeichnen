@@ -10,13 +10,6 @@ namespace FunktionZeichnen
             InitializeComponent();
             Text = "Lineare Funktion";
 
-            // UI-Elemente
-            var labelNeigung = new Label() { Text = "Neigung (m):", Top = 20, Left = 20 };
-            var textBoxNeigung = new TextBox() { Top = 20, Left = 120, Width = 90 };
-            var labelAbfangen = new Label() { Text = "Abfangen (b):", Top = 60, Left = 20 };
-            var textBoxAbfangen = new TextBox() { Top = 60, Left = 120, Width = 90 };
-            var buttonZeichnen = new Button() { Text = "Zeichen", Top = 100, Left = 20 };
-
             // GraphPanel hinzufügen
             _graphPanel = new Koordinatensystem() { Top = 150, Left = 20, Width = 800, Height = 600 };
             Controls.Add(_graphPanel);
@@ -36,10 +29,12 @@ namespace FunktionZeichnen
                 }
             };
 
+
+            // Werde ich Löschen 
             // UI-Elemente hinzufügen
-            Controls.Add(labelNeigung);
+            //Controls.Add(labelNeigung);
             Controls.Add(textBoxNeigung);
-            Controls.Add(labelAbfangen);
+           // Controls.Add(labelAbfangen);
             Controls.Add(textBoxAbfangen);
             Controls.Add(buttonZeichnen);
         }
@@ -47,6 +42,25 @@ namespace FunktionZeichnen
         private void LinearFunktionForm_Load(object sender, System.EventArgs e)
         {
 
+        }
+
+        private void Neigung_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            if (double.TryParse(textBoxNeigung.Text, out double neigung) && double.TryParse(textBoxAbfangen.Text, out double abfangen))
+            {
+                var linearFunction = new LineareFunktion(neigung, abfangen);
+                _graphPanel.SetFunktion(linearFunction);
+                MessageBox.Show($"Funktion zeichnen: y = {neigung}x + {abfangen}");
+            }
+            else
+            {
+                MessageBox.Show("Ungültige Eingabe. Bitte geben Sie numerische Werte ein.");
+            }
         }
     }
 }
