@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FunktionZeichnen
+﻿namespace FunktionZeichnen
 {
     // Abstrakte Basisklasse für mathematische Funktionen
     public abstract class Funktion
