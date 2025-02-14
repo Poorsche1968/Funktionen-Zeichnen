@@ -43,5 +43,10 @@ namespace FunktionZeichnen
             Controls.Add(textBoxAbfangen);
             Controls.Add(buttonZeichnen);
         }
+
+        private void LinearFunktionForm_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
