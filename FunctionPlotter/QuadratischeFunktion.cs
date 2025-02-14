@@ -5,6 +5,9 @@ namespace FunktionZeichnen
     // Klasse zur Darstellung einer quadratischen Funktion
     public class QuadratischeFunktion : Funktion
     {
+        private double _a;
+        private double _b;
+        private double _c;
         // Eigenschaften für die Koeffizienten der quadratischen Funktion
         public double A { get; set; } // Koeffizient für x^2
         public double B { get; set; } // Koeffizient für x
